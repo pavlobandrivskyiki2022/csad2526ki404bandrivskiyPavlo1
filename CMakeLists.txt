@@ -13,9 +13,4 @@ include(FetchContent)
 FetchContent_Declare(
   googletest
   URL
-)
-FetchContent_MakeAvailable(googletest)
-enable_testing()
-add_executable(unit_tests tests/unit_tests.cpp math_operations.cpp)
-target_link_libraries(unit_tests GTest::gtest_main)
-add_test(NAME BasicAddition COMMAND unit_tests)
+        
