@@ -3,3 +3,14 @@ cmake_minimum_required(VERSION 3.10)
 project(hello)
 set(CMAKE_CXX_STANDARD 17)
 add_executable(hello main.cpp)
+
+# Prompt: Extend this CMakeLists.txt to:
+# 1) Fetch GoogleTest using FetchContent or find_package if available.
+# 2) enable_testing() and add a test target 'unit_tests' that builds tests/unit_tests.cpp together with math_operations.cpp.
+# 3) Link the tests with GTest::gtest_main and add add_test(NAME BasicAddition COMMAND unit_tests).
+# 4) Keep the existing 'hello' executable unchanged.
+include(FetchContent)
+FetchContent_Declare(
+  googletest
+  URL
+        
