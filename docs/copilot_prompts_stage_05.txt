@@ -1,0 +1,7 @@
+.github/workflows/ci.yml
+# Prompt: Create a GitHub Actions workflow that:
+# - triggers on push and pull_request to branches that contain 'develop' or 'master' in their names
+# - runs a single job 'cross_build' with a matrix of OS: ubuntu-latest, macos-latest, windows-latest
+# - steps: checkout; configure and build with CMake; run tests (ctest); upload the built executable as an artifact
+# - prefer calling the repo script (ci.sh on Linux/macos, ci.cmd on Windows) if available
+# - ensure windows uses shell: bash for a consistent CMake invocation or use cmd for ci.cmd accordingly
