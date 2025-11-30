@@ -1,0 +1,12 @@
+math_operations.h:// Prompt: Create a minimal header with include guards (or #pragma once) that declares an int add(int a, int b) function in a simple namespace, suitable for unit testing.
+
+math_operations.cpp:// Prompt: Implement the add(int a, int b) function declared in math_operations.h. Keep it trivial and include the header.
+
+tests/unit_tests.cpp:// Prompt: Write GoogleTest-based unit tests for add(int,int) from math_operations.h. Include gtest headers and create at least one test case that checks add(2,3)==5 and a few edge cases. Use gtest_main or provide main() as needed.
+
+CMakeLists.txt:
+# Prompt: Extend this CMakeLists.txt to:
+# 1) Fetch GoogleTest using FetchContent or find_package if available.
+# 2) enable_testing() and add a test target 'unit_tests' that builds tests/unit_tests.cpp together with math_operations.cpp.
+# 3) Link the tests with GTest::gtest_main and add add_test(NAME BasicAddition COMMAND unit_tests).
+# 4) Keep the existing 'hello' executable unchanged.

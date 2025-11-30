@@ -1,0 +1,8 @@
+ci.sh
+Prompt: Generate a portable bash CI script that:
+- creates a clean build directory (build)
+- configures the project with CMake in Release mode
+- builds the project (use parallel build if available)
+- runs CTest with verbose output and proper configuration for multi-config generators (-C Release)
+- exits with non-zero status on any failure (use set -euo pipefail)
+Use commands: cmake -S . -B build -DCMAKE_BUILD_TYPE=Release, cmake --build build --config Release --parallel, ctest --test-dir build --output-on-failure -C Release
